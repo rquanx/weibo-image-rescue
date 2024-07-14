@@ -18,30 +18,30 @@ output_dir = "images"
 cdn_file = "cdn.json"
 
 
-public_dns_servers = [
-    "8.8.8.8",        # Google Public DNS (USA)
-    "8.8.4.4",        # Google Public DNS (USA)
-    "1.1.1.1",        # Cloudflare DNS (Global)
-    "1.0.0.1",        # Cloudflare DNS (Global)
-    "9.9.9.9",        # Quad9 DNS (Global)
-    "149.112.112.112",# Quad9 Secondary DNS (Global)
-    "208.67.222.222", # OpenDNS (Global)
-    "208.67.220.220", # OpenDNS Secondary (Global)
-    "180.76.76.76",   # Baidu Public DNS (China)
-    "114.114.114.114",# 114 DNS (China)
-    "168.95.1.1",     # HiNet DNS (Taiwan)
-    "77.88.8.8",      # Yandex DNS (Russia)
-    "77.88.8.1",      # Yandex DNS (Russia)
-    "74.82.42.42",    # Hurricane Electric DNS (USA)
-    "129.250.35.250", # NTT DNS (Japan)
-    "4.2.2.1",        # Level3 DNS (USA)
-    "4.2.2.2",        # Level3 DNS (USA)
-    "8.26.56.26",     # Comodo Secure DNS (Global)
-    "8.20.247.20",    # Comodo Secure DNS (Global)
-    "64.6.64.6",      # Verisign DNS (Global)
-    "64.6.65.6",      # Verisign DNS (Global)
-    "1.2.4.8",        # DNSPod Public DNS+ (China)
-]
+# public_dns_servers = [
+#     "8.8.8.8",        # Google Public DNS (USA)
+#     "8.8.4.4",        # Google Public DNS (USA)
+#     "1.1.1.1",        # Cloudflare DNS (Global)
+#     "1.0.0.1",        # Cloudflare DNS (Global)
+#     "9.9.9.9",        # Quad9 DNS (Global)
+#     "149.112.112.112",# Quad9 Secondary DNS (Global)
+#     "208.67.222.222", # OpenDNS (Global)
+#     "208.67.220.220", # OpenDNS Secondary (Global)
+#     "180.76.76.76",   # Baidu Public DNS (China)
+#     "114.114.114.114",# 114 DNS (China)
+#     "168.95.1.1",     # HiNet DNS (Taiwan)
+#     "77.88.8.8",      # Yandex DNS (Russia)
+#     "77.88.8.1",      # Yandex DNS (Russia)
+#     "74.82.42.42",    # Hurricane Electric DNS (USA)
+#     "129.250.35.250", # NTT DNS (Japan)
+#     "4.2.2.1",        # Level3 DNS (USA)
+#     "4.2.2.2",        # Level3 DNS (USA)
+#     "8.26.56.26",     # Comodo Secure DNS (Global)
+#     "8.20.247.20",    # Comodo Secure DNS (Global)
+#     "64.6.64.6",      # Verisign DNS (Global)
+#     "64.6.65.6",      # Verisign DNS (Global)
+#     "1.2.4.8",        # DNSPod Public DNS+ (China)
+# ]
 
 
 domains = ["wx1.sinaimg.cn", "wx2.sinaimg.cn", "wx3.sinaimg.cn", "wx4.sinaimg.cn"]
