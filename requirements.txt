@@ -1,0 +1,3 @@
+httpx
+httpx[http2]
+tqdm
