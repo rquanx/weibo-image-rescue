@@ -66,7 +66,7 @@ class Client:
             response = self.request("GET", url)
 
             if not response:
-                print(f"Measurement {measurement_id} in progress...", file=sys.stderr)
+                # print(f"Measurement {measurement_id} in progress...", file=sys.stderr)
                 continue
 
             r = response.json()
@@ -74,7 +74,7 @@ class Client:
                 raise Exception(f"Invalid response: {response.text}")
 
             if r.get("status") == "in-progress":
-                print(f"Measurement {r['id']} in progress...", file=sys.stderr)
+                # print(f"Measurement {r['id']} in progress...", file=sys.stderr)
                 continue
             elif r.get("status") == "finished":
                 return r.get("results", [])
