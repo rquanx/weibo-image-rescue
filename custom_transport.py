@@ -34,7 +34,7 @@ class CustomHTTPTransport(httpx.AsyncHTTPTransport):
 async def request(url, headers, ip):
     transport = CustomHTTPTransport(ip)
     async with httpx.AsyncClient(
-        http2=True, headers=headers, timeout=15.0, transport=transport
+        http2=True, headers=headers, transport=transport
     ) as client:
         try:
             response = await client.get(url)
@@ -43,7 +43,11 @@ async def request(url, headers, ip):
             else:
                 body = response.content
             return Result(
-                status=response.status_code, headers=response.headers, ip=ip, body=body
+                status=response.status_code,
+                headers=response.headers,
+                ip=ip,
+                url=url,
+                body=body,
             )
         except Exception as e:
-            return Result(err=e, ip=ip)
+            return Result(err=e, ip=ip, url=url)
