@@ -1,4 +1,4 @@
-httpx
-httpx[http2]
 tqdm
 requests
+httpsx
+httpx[http2]
