@@ -9,7 +9,7 @@ from custom_transport import request
 from utils import generate_file_name, save_file
 
 
-async def hunt_requests(url, ips, headers, pbar):
+async def rescue_requests(url, ips, headers, pbar):
     tasks = [request(url, headers, ip) for ip in ips]
     results = []
     for task in asyncio.as_completed(tasks):
@@ -19,13 +19,13 @@ async def hunt_requests(url, ips, headers, pbar):
     return results
 
 
-async def hunt(urls, ips, dir, filename=None):
+async def rescue(urls, ips, dir, filename=None):
     total_tasks = len(urls) * len(ips)
     with tqdm(total=total_tasks) as pbar:
         for url in urls:
             u = urlparse(url)
-            tqdm.write(f"Started hunting for {url}")
-            results = await hunt_requests(url, ips, base_headers, pbar)
+            tqdm.write(f"Started rescue for {url}")
+            results = await rescue_requests(url, ips, base_headers, pbar)
             result = None
             for res in results:
                 if res.err or res.status != 200:
@@ -74,7 +74,7 @@ def main(args=None):
         return
 
     print(f"Using {len(ips)} cached resolves.")
-    asyncio.run(hunt([image_url], ips, f"./{output_dir}/"))
+    asyncio.run(rescue([image_url], ips, f"./{output_dir}/"))
 
 
 if __name__ == "__main__":
