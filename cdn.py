@@ -1,11 +1,11 @@
 import json
 import os
 from constant import cdn_file, domains
-from globalping.cache import cache
+from globalping.execute import get_cdn
 
 
 def update_cdn_info():
-    cdn_ips = cache(domains, force=True)
+    cdn_ips = get_cdn(domains, force=True)
     with open(cdn_file, "w") as f:
         json.dump(cdn_ips, f)
     print(f"\nCDN information updated. Total CDN IPs: {len(cdn_ips)}")

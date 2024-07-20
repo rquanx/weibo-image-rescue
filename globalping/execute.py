@@ -4,7 +4,7 @@ from tqdm import tqdm
 from .client import Client
 
 
-def cache(hostnames, force=False):
+def get_cdn(hostnames, force=False):
     provider = Client()
     
     try:
