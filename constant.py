@@ -50,3 +50,4 @@ domains = ["wx1.sinaimg.cn", "wx2.sinaimg.cn", "wx3.sinaimg.cn", "wx4.sinaimg.cn
 
 VALID_IMAGE_URL = 'https://wx4.sinaimg.cn/mw690/41d692acgy1hrnmhkowr6j20be0be3yq.jpg'
 INVALID_IMAGE_URL = 'https://wx3.sinaimg.cn/mw690/41d692acgy1hrnmhkdmqfj20be0beaag.jpg'
+ABSOLUTE_INVALID_IMAGE_URL = 'https://wx3.sinaimg.cn/mw2000/ede975b2gy1hrosk73sx0j20ib0i4q9c.jpg'
