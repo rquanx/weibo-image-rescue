@@ -68,10 +68,6 @@ python main.py -f https://example.com/image.jpg
 - `-f` : Force update CDN information and rescue image from URL. Provide the URL after the flag.
 - `image_url` : The URL of the image to rescue.
 
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details on how to contribute.
-
 ## License
 
 This project is licensed under the terms of the GNU General Public License v3.0. See [LICENSE](LICENSE) for more details.
