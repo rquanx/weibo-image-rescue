@@ -2,3 +2,4 @@ tqdm
 requests
 httpsx
 httpx[http2]
+brotli
