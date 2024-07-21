@@ -91,7 +91,8 @@ def main(args=None):
         return
 
     print(f"Using {len(ips)} cached resolves.")
-    urls = generate_urls_of_all_qualities(image_url)
+    qualities = args.q.split(',')
+    urls = generate_urls_of_all_qualities(image_url, qualities)
     rescue(urls, ips, f"./{output_dir}/")
 
 
