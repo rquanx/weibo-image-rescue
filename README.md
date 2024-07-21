@@ -56,6 +56,13 @@ To rescue an image from a specified URL without updating the CDN information, si
 python main.py <image_url>
 ```
 
+### Rescue Image with different quality
+
+```bash
+python main.py <image_url> # default quality is l
+python main.py <image_url> -q l,ml,m,o,t # form large to small
+```
+
 ### Example
 
 ```bash
