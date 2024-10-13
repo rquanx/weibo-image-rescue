@@ -16,21 +16,14 @@ def generate_urls_of_all_qualities(url, qualities=None):
         qualities = all_qualities()
     # 映射质量值，如果不存在于quality_map中则直接使用输入值
     mapped_qualities = [quality_map.get(q, q) for q in qualities]
-    
     # 获取原始质量部分
     parts = url.split('/')
-    original_quality = parts[-2]
-    
-    # 如果原始质量不在映射中，追加进去
-    predefined_qualities = list(quality_map.values())
-    if original_quality not in predefined_qualities:
-        predefined_qualities.append(original_quality)
-    
+
     # 构建基础URL
     base_url = "/".join(parts[:-2]) + "/{q}/" + parts[-1]
     
     # 生成包含所有质量的URL
-    urls = [base_url.replace("{q}", quality) for quality in set(mapped_qualities)]
+    urls = [base_url.replace("{q}", quality) for quality in mapped_qualities]
     
     return urls
 
