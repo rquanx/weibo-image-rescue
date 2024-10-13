@@ -48,10 +48,11 @@ domains = ["wx1.sinaimg.cn", "wx2.sinaimg.cn", "wx3.sinaimg.cn", "wx4.sinaimg.cn
 
 
 quality_map = {
+    "ol": "original",
     "l": "large",
+    "ml": "mw2000",
     "m": "mw690",
     "t": "thumb150",
-    "ml": "mw2000",
     "o": "orj360",
 }
 
