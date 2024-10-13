@@ -59,8 +59,8 @@ python main.py <image_url>
 ### Rescue Image with different quality
 
 ```bash
-python main.py <image_url> # default quality is l
-python main.py <image_url> -q l,ml,m,o,t # form large to small
+python main.py <image_url> # default quality is all
+python main.py <image_url> -q ol,l,ml,m,o,t # form large to small
 ```
 
 ### Example

@@ -1,5 +1,5 @@
 import argparse
-
+from utils import all_qualities_str
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description="Weibo Image Rescue Tool")
@@ -10,8 +10,8 @@ def parse_args(args):
     parser.add_argument(
         "-q",
         type=str,
-        default="l",
-        help="Specify qualities to rescue, can be a single value or multiple comma-separated values, e.g., l,ml,m,o,t  (default: l)",
+        default=all_qualities_str(),
+        help="Specify qualities to rescue, can be a single value or multiple comma-separated values, e.g., l,ml,m,o,t,ol  (default: l)",
     )
     parser.add_argument("image_url", nargs="?", type=str, help="Image URL to rescue")
     return parser.parse_args(args)

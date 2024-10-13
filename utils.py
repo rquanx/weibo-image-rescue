@@ -3,12 +3,17 @@ import os
 import time
 from constant import quality_map
 
+def all_qualities():
+    return [k for k in quality_map.keys()]
+
+def all_qualities_str():
+    return ",".join(all_qualities())
+
 
 def generate_urls_of_all_qualities(url, qualities=None):
     # 如果没有提供qualities，则默认使用 "l"
     if qualities is None:
-        qualities = ["l"]
-    
+        qualities = all_qualities()
     # 映射质量值，如果不存在于quality_map中则直接使用输入值
     mapped_qualities = [quality_map.get(q, q) for q in qualities]
     
